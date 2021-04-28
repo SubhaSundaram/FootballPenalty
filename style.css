@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-image:url('https://st2.depositphotos.com/3725083/5486/i/950/depositphotos_54860225-stock-photo-stadium.jpg');
+    color:black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+/*.container{
+    background: white;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 20px;
+    align-content: center;
+}*/
+.row{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  background-color: white;
+    align-items: center;
+  width: 200px;
+  height: 250px;
+}
+.circleContainer{
+  border:1px solid sienna;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+#middle{
+  width: 400px;
+}
+.container > .row{
+    justify-content: space-evenly;
+    width: 100%;
+}
+/*.profile-icon{
+    border-radius: 90%;
+    border: 2px solid sienna;
+}*/
+.name{
+    margin: 20px;
+  padding: 5px 0;
+    font-size: large;
+  background-color: Purple;
+    font-weight: 500;
+  text-align: center;
+  width: 100%;
+}
+.round-runs{
+    display: flex;
+    font-size: xx-large;
+    height: 3rem;
+    width: 80%;
+    justify-content: space-around;
+}
+#Striker-button{
+    width: 200px;
+    border-radius: 25%;
+    border: none;
+    font-size: large;
+    color: black;
+    padding: 10px;
+  
+}
+#Striker-button:hover{
+    box-shadow:0 0 10px 0 black;
+}
+.score{
+    margin: -80px;
+    font-size: xx-large;
+  }
+  .score>span{
+    margin: 5px;
+  }
+  
+img{
+  width:100px;
+  height:100px;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.green{
+  background-color: green;
+}
+.red{
+  background-color:red;
+}
+.res{
+  font-weight: bold;
+  text-align: center;
+}
