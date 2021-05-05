@@ -1,4 +1,4 @@
-var goalpoints=[0,1];
+// var goalpoints=[0,1];
 var team1={
   name:"Anguilla",
   runs:[],
@@ -35,7 +35,7 @@ function updateruns(){
    else{
      team1runs[index].classList.add("red");
    }
-  })
+  });
   team2.runs.forEach((run,index)=>{
     if(run===1){
     team2runs[index].classList.add("green");
@@ -43,10 +43,12 @@ function updateruns(){
     else{
      team2runs[index].classList.add("red");
     }
-  })
+  });
   
- if(team1.runs.length==5 && team2.runs.length==5){
-    alert("both finished chances");  document.getElementById("result").textContent=team1.score===team2.score?"its draw":`${team1.score>team2.score?team1.name:team2.name} Wins`
+ if(team1.runs.length==5 && team2.runs.length==5){ 
+    team1.score = calculateScore(team1.runs);
+  team2.score = calculateScore(team2.runs);
+   document.getElementById("result").textContent=team1.score===team2.score? "its draw" :`${team1.score>team2.score?team1.name : team2.name} Wins`
   }
      else{ 
   toss=
@@ -75,5 +77,7 @@ function strike(){
   }
 }
 var calculateScore = (runs) => {
-    return ((total,runs) => total+runs)
-}
+    return runs.map(num =>{
+      return num =='0' ? 0: num;
+    }).reduce((total,num) => total+num);
+  }
